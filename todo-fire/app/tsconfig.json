@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "listFiles": true
+    },
+    "filesGlob": [
+        "**/*.ts",
+        "./*.ts",
+        "./typings/index.d.ts",
+        "!../node_modules/**",
+        "!../lib/**"
+    ],
+    "compileOnSave": true,
+    "files": [
+        "app.ts",
+        "typings/globals/angular/index.d.ts",
+        "typings/globals/firebase3/index.d.ts",
+        "typings/index.d.ts",
+        "./app.ts",
+        "./typings/index.d.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}

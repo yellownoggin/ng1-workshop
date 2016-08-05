@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="todoFire">
+
+<head>
+    <meta charset="utf-8">
+    <title>Todo- Fire</title>
+<link rel="stylesheet" href="./lib/angular-material/angular-material.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body ng-controller="MainController as vm">
+    <div layout="row">
+<h2>{{vm.headline}}</h2>
+<span flex></span>
+<div class="">
+<span>Currently logged in: </span>    {{vm.displayEmail}}
+</div>
+    </div>
+    <hr>
+
+    <div layout="column" layout-align="center center">
+        <form name="loginSignupForm">
+            <div>
+                <md-input-container>
+                    <label for="">email</label>
+                    <input name="email" ng-model="vm.user.email">
+                </md-input-container>
+                <md-input-container>
+                    <label for="">password</label>
+                    <input name="password" type="password" ng-model="vm.user.password">
+                </md-input-container>
+            </div>
+
+            <md-button class="md-raised" ng-click="vm.signInUserEP(vm.user.email, vm.user.password)">Login</md-button>
+            <md-button class="md-raised" ng-click="vm.createUserEP(vm.user.email, vm.user.password)">Sign up</md-button>
+            <md-button class="md-raised" ng-click="vm.logoutUser()" ng-show="vm.someoneLoggedIn">Sign out</md-button>
+        </form>
+    </div>
+
+    <!-- vendor scripts -->
+    <script src="./lib/firebase/firebase.js" charset="utf-8"></script>
+    <script src="./lib/angular/angular.js" charset="utf-8"></script>
+    <script src="./lib/angular-animate/angular-animate.js" charset="utf-8"></script>
+    <script src="./lib/angular-aria/angular-aria.js" charset="utf-8"></script>
+    <script src="./lib/angular-material/angular-material.js" charset="utf-8"></script>
+    <script src="./lib/angular-messages/angular-messages.js" charset="utf-8"></script>
+    <script src="./lib/angularfire/dist/angularfire.js" charset="utf-8"></script>
+    <!-- /vendor scripts -->
+
+    <!-- application scripts -->
+    <script src="./app/app.js" charset="utf-8"></script>
+    <!-- <script src="/app/app.js" charset="utf-8"></script> -->
+    <!-- /application scripts -->
+
+
+    <!-- <script>
+    put inside .run for the module
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBrluAFQu9_-mLqLYaswrvrmEGC26ikAcg",
+        authDomain: "todo-fire-264ad.firebaseapp.com",
+        databaseURL: "https://todo-fire-264ad.firebaseio.com",
+        storageBucket: "todo-fire-264ad.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script> -->
+</body>
+
+</html>

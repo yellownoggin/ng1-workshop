@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160802155123",
+    "firebase": "registry:dt/firebase#2.4.1+20160412125105"
+  }
+}
